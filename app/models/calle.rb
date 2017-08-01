@@ -1,0 +1,2 @@
+class Calle < ApplicationRecord
+end

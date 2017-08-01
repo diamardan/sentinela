@@ -1,0 +1,2 @@
+class SentinelaUsuario < ApplicationRecord
+end

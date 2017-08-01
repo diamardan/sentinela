@@ -1,0 +1,27 @@
+<div class="header-container">
+	<!--<img src="<%= asset_path('sentinela/LogoSentinela.png') %>" />-->
+
+
+<%= link_to image_tag('sentinela/LogoSentinela.png'), root_path %>
+	<div class="header-user-container" >
+		<div>Usuario :</div>
+		<div><%= current_user.email %></div>
+	
+	<ul>
+		<% if user_signed_in? %>
+		<li>
+			<%= link_to "cerrar session", destroy_user_session_path, method: :delete %>
+		</li>
+		<% else %>
+		<li>
+			<%= link_to "iniciar sesion", new_user_session_path %>
+		</li>
+	
+		<% end %>
+	</ul>
+
+	</div>
+
+
+	<img src="<%= asset_path('sentinela/bitacora.png') %>" />
+</div>

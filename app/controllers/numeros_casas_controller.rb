@@ -1,0 +1,2 @@
+class NumerosCasasController < ApplicationController
+end

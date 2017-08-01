@@ -1,0 +1,2 @@
+module SentinelaUsuarioHelper
+end

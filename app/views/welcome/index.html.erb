@@ -1,0 +1,17 @@
+
+<% if current_user.super_admin? %>
+    <%= render 'layouts/header_normal' %>
+    <%= render 'layouts/main' %>
+
+<% elsif current_user.admin? %>
+    <%= render 'layouts/header_normal' %>
+    <%= render 'layouts/main' %>
+
+<% elsif current_user.vigilante? %>
+    <%= render 'layouts/header_normal' %>
+    <h3>Bienvenido, vigilante</h3>
+
+<% else %>
+    <%= render 'layouts/header_normal' %>
+    <%= render 'layouts/main' %>
+<% end %>

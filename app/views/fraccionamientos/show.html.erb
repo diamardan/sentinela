@@ -1,0 +1,10 @@
+<%= render 'layouts/header_admin' %> 
+
+<div class="container">
+	<div><%= @fracc.clave%></div>
+	<div><%= @fracc.nombre%></div>
+	<div><%= @fracc.numero_casas%></div>
+	<div><%= @fracc.estado%></div>
+
+  <%= link_to "Crear" ,new_fraccionamiento_path %>
+</div>

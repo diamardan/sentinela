@@ -1,0 +1,2 @@
+class NumerosCasa < ApplicationRecord
+end

@@ -1,0 +1,37 @@
+<%= render 'layouts/header_bitacora' %>
+<div class="container">
+  <h2>FRACCIONAMIENTO</h2>
+    <ul class="flex-form">
+      <li>
+        <h4>NOMBRE DEL FRACCIONAMIENTO :</h4></li>
+      <li>
+        <%= @id_fracc.nombre %>
+      </li>
+      <li>
+        <h4>FECHA :</h4>
+        <h4><%= @fecha_mostrar%></h4>
+      </li>
+    </ul>
+
+  <div class="div-container-table">
+    <table>
+      <th>FECHA</th>
+      <th>HORA</th>
+      <th>CASA</th>
+      <th>NOMBRE</th>
+      <th>ACCESO</th>
+      <th>IDENTIFICACION</th>
+      <% @fecha_visita.each do |visita|%>
+          <tr>
+            <td><%= visita.fecha %></td>
+            <td><%= visita.hora %></td>
+            <td><%= visita.casa %></td>
+            <td><%= visita.nombre_visitante.to_s + " " + visita.apellidos_visitante.to_s %></td>
+            <td><%= visita.tipo_visita %></td>
+            <td><%= visita.foto_identificacion %></td>
+          </tr>
+      <% end %>
+    </table>
+    <%= will_paginate @fecha_visita%>
+  </div>
+</div>
